@@ -10,28 +10,39 @@
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!--my css-->
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-	
-
 </head>
-<body id="flex-wrapper" style="background-color: red;">
-  <div id="flex-content" style="background-color: blue";>    
-    <div class="container-fluid fill">
+
+<body id="flex-container">
+  <div class="flex-content">
+    <div class="container-fluid">
       <div class="row">
-        <main class="col-md-7">
-          Main Content
-        </main>
-        <div class="col-md-1" id="character-pool">
-          A
+
+        <div class="col-md-7 flex-content" id="left">
+          <main>
+            <h1>#left</h1>        
+          </main>
         </div>
-        <aside class="col-md-4">
-          Aside
-        </aside>
-      </div><!--/.row-->
-    </div><!--/container-fluid-->      
-  </div><!--/#flex-content-->
+
+        <div class="col-md-1 flex-content" id="center">
+          <div id="character-pool">
+            <h2>A</h2>
+          </div>
+        </div>
+
+        <div class="col-md-4 flex-content" id="right">
+          <aside>
+            <h3>#right</h3>
+          </aside>
+        </div>
+
+      </div>
+    </div>  
+  </div> 
+
   <footer>
-  This is the footer
+    This is the footer
   </footer>
 
-</body><!--/#flex-wrapper-->
+</body>
 </html>
+
