@@ -33,15 +33,15 @@ var wordModule = {
         newSpan.setAttribute("class", "glyphicon glyphicon-question-sign");        
         var targetDiv = document.getElementById("wordBlank");
         targetDiv.appendChild(newSpan);
-    }  
+    }
+    return wordCurrent;  
   },
-
-
-
 
 }; // close WordModule
 
-document.onload = wordModule.wordLoader();
+console.log(wordModule.wordLoader());
+
+
 
 
 
