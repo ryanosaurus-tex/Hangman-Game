@@ -15,16 +15,30 @@ var ButtonModule = {
 */
 
 
-var WordModule = {
+var wordModule = {
 	wordBank: ["Bluebird", "Mockingbird", "Cardinal", "Robin", "Chickadee", "Grackle", "Dove"],	
 	wordSelector: function() {		
 		var x = Math.floor(Math.random() * (this.wordBank.length) );
 		return this.wordBank[x];		
-	}
+	},
+  wordLoader: function() {
+    var wordCurrent = this.wordSelector();
+    var i = 0;    
+    for(i = 0; i < wordCurrent.length; i++) {
+        var newSpan = document.createElement("span");
+        newSpan.setAttribute("ID", wordCurrent.i);        
+        newSpan.setAttribute("class", "glyphicon glyphicon-question-sign");        
+        var targetDiv = document.getElementById("wordBlank");
+        targetDiv.appendChild(newSpan);
+    }
+
+  },
 
 }; // close WordModule
 
-console.log( WordModule.wordSelector() );
+window.onload = wordModule.wordLoader();
+
+
 
 
 
