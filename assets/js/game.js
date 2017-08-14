@@ -1,14 +1,16 @@
 
 
-var buttonModule = {
+var letterModule = {
     alphabet: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
-    createButtons: function() {
+    letterCreator: function() {
   	    var i = 0;
   	    for (i = 0; i < this.alphabet.length; i++) {
-  	        var button = document.createElement("BUTTON");
-  	        var text = document.createTextNode(buttonModule.alphabet[i]);
-  	        button.appendChild(text);
-  	        document.getElementById("character-pool").appendChild(button);
+  	        var letter = document.createElement("a");
+            letter.id = this.alphabet[i];
+            letter.className = "letter";            
+  	        var text = document.createTextNode(this.alphabet[i]);
+  	        letter.appendChild(text);
+  	        document.getElementById("character-pool").appendChild(letter);
   	    };  	
     } 
 } 
@@ -86,6 +88,6 @@ console.log(gameModule.gameWord);
 
 document.addEventListener("keyup", gameModule.gameKeyHandler);
 
-document.body.onload = buttonModule.createButtons();
+document.body.onload = letterModule.letterCreator();
 
 		
